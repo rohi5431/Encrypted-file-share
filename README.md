@@ -45,3 +45,52 @@ This project demonstrates real-world security practices used in modern web appli
 - View uploaded files
 - Admin-only protected routes
 - Scheduled admin reports using cron jobs
+
+## 🧱 Tech Stack
+
+### 🌐 Frontend
+- React.js
+- React Router
+- Axios
+- Tailwind CSS
+
+### 🖥️ Backend
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- Passport.js (Google OAuth 2.0)
+- JWT-based authentication
+
+### 🔒 Security & Utilities
+- AES encryption
+- bcrypt for password hashing
+- Multer for secure file handling
+- Nodemailer for email services
+- Rate limiting for API protection
+- Helmet for HTTP security headers
+- Cron jobs for scheduled tasks
+
+## 🧱 Tech Stack
+
+### 🌐 Frontend
+<p>
+  <img src="https://skillicons.dev/icons?i=react" height="28"/> React.js &nbsp;
+  <img src="https://skillicons.dev/icons?i=tailwind" height="28"/> Tailwind CSS &nbsp;
+  <img src="https://skillicons.dev/icons?i=js" height="28"/> JavaScript &nbsp;
+</p>
+
+### 🖥️ Backend
+<p>
+  <img src="https://skillicons.dev/icons?i=nodejs" height="28"/> Node.js &nbsp;
+  <img src="https://skillicons.dev/icons?i=express" height="28"/> Express.js &nbsp;
+  <img src="https://skillicons.dev/icons?i=mongodb" height="28"/> MongoDB &nbsp;
+</p>
+
+### 🔒 Security & DevOps
+<p>
+  <img src="https://skillicons.dev/icons?i=aws" height="28"/> AWS &nbsp;
+  <img src="https://skillicons.dev/icons?i=docker" height="28"/> Docker &nbsp;
+  <img src="https://skillicons.dev/icons?i=git" height="28"/> Git &nbsp;
+</p>
+
+

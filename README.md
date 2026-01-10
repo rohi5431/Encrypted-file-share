@@ -95,31 +95,70 @@ This project demonstrates real-world security practices used in modern web appli
 
 ## 🏗️ System Architecture — Encrypted File Share
 
-```mermaid
-flowchart TB
-    Client[🌐 Client UI<br/>React + Tailwind CSS<br/>Browser / Mobile]
+## 🏗️ System Architecture — Encrypted File Share
 
-    Server[🖥️ API Server<br/>Node.js + Express.js]
+```
+# ===========================
+# CLIENT LAYER (Frontend)
+# ===========================
+┌─────────────────────────┐
+│        Client (UI)       │
+│  React + Tailwind CSS    │
+│  Browser / Mobile        │
+└─────────────┬───────────┘
+              │ HTTPS + JWT
+              ▼
 
-    Auth[🔑 Authentication<br/>JWT / Google OAuth]
-    RBAC[👥 Authorization<br/>RBAC (User / Admin)]
-    Encrypt[🔐 Encryption Engine<br/>AES File Encryption]
-    FileSvc[📤 File Services<br/>Upload / Download<br/>Share / OTP]
-    Security[🛡️ Security Middleware<br/>Helmet / Rate Limiter]
+# ===========================
+# API SERVER LAYER (Backend)
+# ===========================
+┌─────────────────────────┐
+│   API Gateway / Server  │
+│   Node.js + Express.js  │
+│                         │
+│ ┌─────────────────────┐ │
+│ │ Authentication Layer│
+│ │ JWT / Google OAuth  │
+│ └─────────────────────┘ │
+│                         │
+│ ┌─────────────────────┐ │
+│ │ Authorization Layer │
+│ │ RBAC (User/Admin)   │
+│ └─────────────────────┘ │
+│                         │
+│ ┌─────────────────────┐ │
+│ │ Encryption Engine   │
+│ │ AES (File Encrypt) │
+│ └─────────────────────┘ │
+│                         │
+│ ┌─────────────────────┐ │
+│ │ File Services       │
+│ │ Upload / Download  │
+│ │ Share / OTP        │
+│ └─────────────────────┘ │
+│                         │
+│ ┌─────────────────────┐ │
+│ │ Security Middleware │
+│ │ Helmet / RateLimit  │
+│ └─────────────────────┘ │
+└─────────────┬───────────┘
+              │
+              ▼
 
-    DB[(🗄️ MongoDB<br/>File Metadata)]
-    Storage[(☁️ Local Storage / AWS S3<br/>Encrypted Files)]
-
-    Client -->|HTTPS + JWT| Server
-    Server --> Auth
-    Server --> RBAC
-    Server --> Encrypt
-    Server --> FileSvc
-    Server --> Security
-
-    FileSvc --> DB
-    FileSvc --> Storage
-
+# ===========================
+# STORAGE LAYER
+# ===========================
+┌─────────────────────────┐
+│        Storage Layer    │
+│ ┌─────────────────────┐│
+│ │ MongoDB (Metadata)  ││
+│ └─────────────────────┘│
+│ ┌─────────────────────┐│
+│ │ Local Storage / S3  ││
+│ │ Encrypted Files     ││
+│ └─────────────────────┘│
+└─────────────────────────┘
+```
 
 
 

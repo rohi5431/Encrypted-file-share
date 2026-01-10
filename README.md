@@ -74,23 +74,17 @@ This project demonstrates real-world security practices used in modern web appli
 
 ### 🌐 Frontend
 <p>
-  <img src="https://skillicons.dev/icons?i=react" height="28"/> React.js &nbsp;
-  <img src="https://skillicons.dev/icons?i=tailwind" height="28"/> Tailwind CSS &nbsp;
-  <img src="https://skillicons.dev/icons?i=js" height="28"/> JavaScript &nbsp;
+  <img src="https://skillicons.dev/icons?i=react,tailwind,js" />
 </p>
 
 ### 🖥️ Backend
 <p>
-  <img src="https://skillicons.dev/icons?i=nodejs" height="28"/> Node.js &nbsp;
-  <img src="https://skillicons.dev/icons?i=express" height="28"/> Express.js &nbsp;
-  <img src="https://skillicons.dev/icons?i=mongodb" height="28"/> MongoDB &nbsp;
+  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb" />
 </p>
 
 ### 🔒 Security & DevOps
 <p>
-  <img src="https://skillicons.dev/icons?i=aws" height="28"/> AWS &nbsp;
-  <img src="https://skillicons.dev/icons?i=docker" height="28"/> Docker &nbsp;
-  <img src="https://skillicons.dev/icons?i=git" height="28"/> Git &nbsp;
+  <img src="https://skillicons.dev/icons?i=aws,docker,git" />
 </p>
 
 ## ✅ Features Summary
@@ -373,6 +367,7 @@ Specialized in Backend Development & Security
 
 - GitHub: https://github.com/rohi5431 
 - Email: rohitk60316@gmail.com
+
 
 
 

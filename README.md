@@ -72,20 +72,10 @@ This project demonstrates real-world security practices used in modern web appli
 
 ## 🧱 Tech Stack
 
-### 🌐 Frontend
 <p>
-  <img src="https://skillicons.dev/icons?i=react,tailwind,js" />
+  <img src="https://skillicons.dev/icons?i=react,tailwind,js,nodejs,express,mongodb,aws,docker,git" />
 </p>
-
-### 🖥️ Backend
-<p>
-  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb" />
-</p>
-
-### 🔒 Security & DevOps
-<p>
-  <img src="https://skillicons.dev/icons?i=aws,docker,git" />
-</p>
+>
 
 ## ✅ Features Summary
 - Secure encrypted file upload & download
@@ -367,6 +357,7 @@ Specialized in Backend Development & Security
 
 - GitHub: https://github.com/rohi5431 
 - Email: rohitk60316@gmail.com
+
 
 
 

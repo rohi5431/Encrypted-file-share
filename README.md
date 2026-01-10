@@ -317,7 +317,11 @@ npm run dev
 
 **Rohit Kumar**  
 Computer Science Engineer  
-Specialized in Backend Development & Security
+Specialized in Backend Development & Security  
+
+- GitHub: https://github.com/rohi5431 
+- Email: rohitk60316@gmail.com
+
 
 
 

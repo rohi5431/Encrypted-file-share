@@ -122,6 +122,26 @@ This project demonstrates real-world security practices used in modern web appli
 - Validation & authentication errors handled securely
 - No sensitive data exposed in responses
 
+## 📸 Screenshots
+
+<p align="center">
+  <img src="screenshots/login.png" width="260" />
+  <img src="screenshots/register.png" width="260" />
+  <img src="screenshots/user-dashboard.png" width="260" />
+</p>
+
+<p align="center">
+  <img src="screenshots/file-upload.png" width="260" />
+  <img src="screenshots/file-download.png" width="260" />
+  <img src="screenshots/otp-verify.png" width="260" />
+</p>
+
+<p align="center">
+  <img src="screenshots/admin-dashboard.png" width="260" />
+  <img src="screenshots/users-data.png" width="260" />
+  <img src="screenshots/files.png" width="260" />
+</p>
+
 ## 🏗️ System Architecture — Encrypted File Share
 
 ```
@@ -357,6 +377,7 @@ Specialized in Backend Development & Security
 
 - GitHub: https://github.com/rohi5431 
 - Email: rohitk60316@gmail.com
+
 
 
 

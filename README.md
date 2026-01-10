@@ -93,4 +93,33 @@ This project demonstrates real-world security practices used in modern web appli
   <img src="https://skillicons.dev/icons?i=git" height="28"/> Git &nbsp;
 </p>
 
+## 🏗️ System Architecture — Encrypted File Share
+
+```mermaid
+flowchart TB
+    Client[🌐 Client UI<br/>React + Tailwind CSS<br/>Browser / Mobile]
+
+    Server[🖥️ API Server<br/>Node.js + Express.js]
+
+    Auth[🔑 Authentication<br/>JWT / Google OAuth]
+    RBAC[👥 Authorization<br/>RBAC (User / Admin)]
+    Encrypt[🔐 Encryption Engine<br/>AES File Encryption]
+    FileSvc[📤 File Services<br/>Upload / Download<br/>Share / OTP]
+    Security[🛡️ Security Middleware<br/>Helmet / Rate Limiter]
+
+    DB[(🗄️ MongoDB<br/>File Metadata)]
+    Storage[(☁️ Local Storage / AWS S3<br/>Encrypted Files)]
+
+    Client -->|HTTPS + JWT| Server
+    Server --> Auth
+    Server --> RBAC
+    Server --> Encrypt
+    Server --> FileSvc
+    Server --> Security
+
+    FileSvc --> DB
+    FileSvc --> Storage
+
+
+
 

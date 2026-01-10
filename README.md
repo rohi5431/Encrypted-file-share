@@ -93,6 +93,51 @@ This project demonstrates real-world security practices used in modern web appli
   <img src="https://skillicons.dev/icons?i=git" height="28"/> Git &nbsp;
 </p>
 
+## ✅ Features Summary
+- Secure encrypted file upload & download
+- JWT & Google OAuth authentication
+- OTP-based secure file sharing
+- Role-based access control (User/Admin)
+- AES file encryption before storage
+- Admin monitoring & audit logs
+
+## 🔐 Security Highlights
+- AES encryption for file protection
+- bcrypt password hashing
+- JWT-based stateless authentication
+- OTP verification for sensitive actions
+- Rate limiting & HTTP security headers
+- Encrypted storage (Local / AWS S3)
+
+## 🔄 Authentication Flow
+1. User registers or logs in
+2. JWT token issued after successful authentication
+3. Token stored securely on client
+4. Protected routes validate JWT on every request
+5. Admin routes require role verification
+
+## 🔐 File Encryption Flow
+1. File uploaded by authenticated user
+2. File encrypted using AES before storage
+3. Encrypted file stored locally or on AWS S3
+4. Metadata stored in MongoDB
+5. File decrypted only for authorized access
+
+## 📡 API Overview
+- POST /api/auth/login
+- POST /api/auth/register
+- POST /api/files/upload
+- GET /api/files/:id
+- POST /api/files/share
+- POST /api/otp/verify
+- GET /api/admin/users
+
+## 🧪 Error Handling
+- Centralized error handling middleware
+- Proper HTTP status codes
+- Validation & authentication errors handled securely
+- No sensitive data exposed in responses
+
 ## 🏗️ System Architecture — Encrypted File Share
 
 ```
@@ -313,6 +358,13 @@ npm run dev
 - Frontend: `http://localhost:5181`
 - Backend API: `http://localhost:5000`
 
+## 🚀 Future Improvements
+- End-to-end encryption
+- File versioning
+- Virus scanning for uploads
+- Download limits & expiry
+- Activity dashboard & analytics
+
 ## 👨‍💻 Author
 
 **Rohit Kumar**  
@@ -321,6 +373,7 @@ Specialized in Backend Development & Security
 
 - GitHub: https://github.com/rohi5431 
 - Email: rohitk60316@gmail.com
+
 
 
 

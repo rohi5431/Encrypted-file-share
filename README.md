@@ -95,8 +95,6 @@ This project demonstrates real-world security practices used in modern web appli
 
 ## 🏗️ System Architecture — Encrypted File Share
 
-## 🏗️ System Architecture — Encrypted File Share
-
 ```
 # ===========================
 # CLIENT LAYER (Frontend)
@@ -159,6 +157,168 @@ This project demonstrates real-world security practices used in modern web appli
 │ └─────────────────────┘│
 └─────────────────────────┘
 ```
+
+## 📁 Project Structure
+
+### 🖥️ Backend
+
+```
+backend/
+├── config/                         # Configuration files
+│   ├── db.js                       # MongoDB connection
+│   └── passport.js                 # Google OAuth configuration
+│
+├── controllers/                    # Request handlers
+│   ├── auth.controller.js          # Authentication logic
+│   ├── file.controller.js          # File upload & management
+│   ├── share.controller.js         # Secure file sharing
+│   ├── otp.controller.js           # OTP generation & validation
+│   ├── admin.controller.js         # Admin operations
+│   └── downloadFileById.controller.js # Secure file download by ID
+│
+├── middleware/                     # Custom middleware
+│   ├── auth.middleware.js          # JWT authentication
+│   ├── admin.middleware.js         # Admin-only access
+│   ├── rateLimit.middleware.js     # API rate limiting
+│   ├── error.middleware.js         # Centralized error handling
+│   └── upload.middleware.js        # File upload handling (Multer)
+│
+├── models/                         # Database schemas
+│   ├── User.js                     # User model
+│   ├── file.js                     # File metadata model
+│   ├── OTP.js                      # OTP storage
+│   ├── shareLink.js                # Shared file links
+│   ├── AuditLog.js                 # System audit logs
+│   └── AdminNotification.js        # Admin alerts & notifications
+│
+├── routes/                         # API routes
+│   ├── auth.routes.js              # Authentication routes
+│   ├── file.routes.js              # File routes
+│   ├── share.routes.js             # File sharing routes
+│   ├── otp.routes.js               # OTP routes
+│   └── admin.routes.js             # Admin routes
+│
+├── utils/                          # Utility helpers
+│   ├── crypto_utils.js             # Cryptographic utilities
+│   ├── encryption.js               # AES encryption/decryption
+│   ├── generateToken.js            # JWT generation
+│   ├── sendEmail.js                # Email service (Nodemailer)
+│   ├── s3upload.js                 # AWS S3 upload helper
+│   ├── storage.js                  # Storage abstraction
+│   └── tokenGenerator.js           # Secure token generation
+│
+├── cron/                           # Scheduled tasks
+│   └── adminReports.cron.js        # Automated admin reports
+│
+├── uploads_encrypted/              # Encrypted file storage
+│
+├── server.js                       # Server entry point
+└── package.json                    # Backend dependencies
+```
+
+### 🌐 Frontend
+
+```
+frontend/
+├── public/                         # Static assets
+│
+├── src/
+│   ├── api/                        # API configuration & services
+│   │   ├── axios.js                # Axios instance & interceptors
+│   │   └── admin.api.js            # Admin-related API calls
+│   │
+│   ├── auth/                       # Authentication helpers
+│   │   └── ProtectedRoute.jsx      # Route protection component
+│   │
+│   ├── components/                 # Reusable UI components
+│   │   ├── Navbar.jsx              # Navigation bar
+│   │   ├── FileCard.jsx            # File display card
+│   │   ├── UploadBox.jsx           # File upload UI
+│   │   ├── OTPInput.jsx            # OTP input component
+│   │   └── Loader.jsx              # Loading indicator
+│   │
+│   ├── context/                    # Global state management
+│   │   └── AuthContext.jsx         # Authentication context
+│   │
+│   ├── hooks/                      # Custom React hooks
+│   │   └── useIdleLogout.js        # Auto logout on inactivity
+│   │
+│   ├── pages/                      # Application pages
+│   │   ├── Dashboard.jsx           # User dashboard
+│   │   ├── Upload.jsx              # File upload page
+│   │   ├── MyFiles.jsx             # User files list
+│   │   ├── ShareFile.jsx           # File sharing page
+│   │   ├── Download.jsx            # Secure file download
+│   │   ├── VerifyOTP.jsx           # OTP verification page
+│   │   └── admin/                  # Admin pages
+│   │       ├── AdminDashboard.jsx  # Admin dashboard
+│   │       ├── AdminUsers.jsx      # Manage users
+│   │       └── AdminFiles.jsx      # Manage files
+│   │
+│   ├── App.jsx                     # Root component
+│   └── main.jsx                    # Application entry point
+│
+├── vite.config.js                  # Vite configuration
+└── package.json                    # Frontend dependencies
+```
+## ⚙️ Environment Variables
+
+### 🖥️ Backend (`.env`)
+
+```
+PORT=5000
+MONGO_URI=your_mongodb_url
+JWT_SECRET=your_jwt_secret
+ENCRYPTION_KEY=your_base64_encryption_key
+
+CLIENT_URL=http://localhost:5181
+FRONTEND_URL=http://localhost:5181
+SERVER_URL=http://localhost:5000
+
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+STORAGE=local   # options: local | s3
+```
+
+### 📌 Notes
+- `ENCRYPTION_KEY` must be a **secure base64-encoded key**
+- `JWT_SECRET` should be **long and random**
+- Set `STORAGE=s3` when using **AWS S3**
+- Never commit `.env` files to GitHub
+
+## ▶️ How to Run Locally
+
+### 1️⃣ Clone the Repository
+```
+git clone https://github.com/your-username/encrypted-file-share.git
+cd encrypted-file-share
+```
+
+### 2️⃣ Backend Setup
+```
+cd backend
+npm install
+npm run dev
+```
+
+### 3️⃣ Frontend Setup
+```
+cd frontend
+npm install
+npm run dev
+```
+
+### 🌐 Access the Application
+- Frontend: `http://localhost:5181`
+- Backend API: `http://localhost:5000`
+
+## 👨‍💻 Author
+
+**Rohit Kumar**  
+Computer Science Engineer  
+Specialized in Backend Development & Security
+
 
 
 

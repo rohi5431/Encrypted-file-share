@@ -377,6 +377,8 @@ Specialized in Backend Development & Security
 
 - GitHub: https://github.com/rohi5431 
 - Email: rohitk60316@gmail.com
+- Linkedln: https://www.linkedin.com/in/rohit-kumar-3707382a2/
+
 
 
 

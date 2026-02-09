@@ -210,6 +210,10 @@ app.get("/api/files", authMiddleware, async (req, res) => {
 app.use(notFound);
 app.use(errorHandler);
 
+app.get("/", (req, res) => {
+  res.json({ status: "OK", service: "Encrypted File Share Backend" });
+});
+
 /* =========================
    START SERVER
 ========================= */

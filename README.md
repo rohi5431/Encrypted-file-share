@@ -375,6 +375,7 @@ Handles persistent data storage and encrypted file storage.
 <p align="center">
   <img src="screenshots/Architecture.png" width="800"/>
 </p>
+```
 ### 🖥️ Backend
 
 ```

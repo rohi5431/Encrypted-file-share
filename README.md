@@ -370,12 +370,14 @@ Handles persistent data storage and encrypted file storage.
 │  - Encrypted .enc Files                  │
 └──────────────────────────────────────────┘
 ```
+
+---
 ## 🏗️ System Architecture
 
 <p align="center">
   <img src="screenshots/Architecture.png" width="800"/>
 </p>
-```
+---
 ### 🖥️ Backend
 
 ```
